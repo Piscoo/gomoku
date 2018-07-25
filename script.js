@@ -80,17 +80,8 @@ for(var i=0; i<count; i++) {
 
  var chess = document.getElementById('chess');
  var context = chess.getContext('2d');
- context.strokeStyle = "#00FF00";//设置画笔颜色
-var logo = new Image();
-logo.src = "images/logo.jpg";
-logo.onload = function(){
-	context.drawImage(logo, 0, 0, 450, 450);//加载底部图片
-	drawChessBoard();
-	//oneStep(0, 0, true);
-	//oneStep(1, 1, false);
-}
+ context.strokeStyle = "#000000";//设置画笔颜色
 //画棋盘
-var drawChessBoard = function(){
 	for(var i = 0; i<15;i++){
 		//画横线
 		context.moveTo(15 + i*30,15);
@@ -101,7 +92,6 @@ var drawChessBoard = function(){
 		context.lineTo(435,15 + i*30);
 		context.stroke();
 	}
-}
 var oneStep = function(i, j, me){
 	//画棋子
 	context.beginPath();
